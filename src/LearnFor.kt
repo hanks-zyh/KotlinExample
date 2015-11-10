@@ -51,3 +51,11 @@ fun main(args: Array<String>) {
         }
     }
 }
+
+fun foo(){
+    var ints = IntArray(2)
+    ints.forEach mymark@{
+        if(it ==0) return@mymark
+        print(it)
+    }
+}
