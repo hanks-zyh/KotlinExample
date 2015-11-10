@@ -42,4 +42,12 @@ fun main(args: Array<String>) {
     //    the element at 2 is hangzhou
     //    the element at 3 is shenzhen
 
+
+    mymark@ for(i in 1..100){
+        for(j in 1..100){
+            if(i ==5 && j ==5){
+                break@mymark
+            }
+        }
+    }
 }
