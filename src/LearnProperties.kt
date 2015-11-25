@@ -8,12 +8,19 @@ public class Address {
     public var street: String = ""
     public var city: String = ""
     public var state: String = ""
-    public var zip: String = ""
 
+    // getter setter
+    var zip: String = ""
+        get() = field
+        set(value) {
+            if (value.length > 0) {
+                 field = "$value.zip"
+            }
+        }
 
     // getter
-    val isEmpty : Boolean
-    get() = this.name.isNullOrEmpty()
+    val isEmpty: Boolean
+        get() = this.name.isNullOrEmpty()
 
 
 }
@@ -29,12 +36,14 @@ fun cpoyAddress(address: Address): Address {
 }
 
 
-
 fun main(args: Array<String>) {
 
-    val  address = Address()
+    val address = Address()
     println(address.isEmpty) // true
-//    address.isEmpty = false // compile error
+    //    address.isEmpty = false // compile error
     address.name = "hanks"
     println(address.isEmpty) // false
+
+    address.zip = "info"
+    println(address.zip) //info.zip
 }
