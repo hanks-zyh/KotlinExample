@@ -56,5 +56,7 @@ class Unrelated(o: Outer) {
 }
 
 fun main(args: Array<String>) {
-    Subclass().info()
+    val sub = Subclass()
+    sub.info()
+    Unrelated(sub).info()
 }
