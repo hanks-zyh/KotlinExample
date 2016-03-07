@@ -1,2 +1,0 @@
-# KotlinExample
-learn kotlin
