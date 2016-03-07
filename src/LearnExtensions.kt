@@ -12,8 +12,12 @@ fun MutableList<Int>.swap(index1: Int, index2: Int) {
 
 fun main(args: Array<String>) {
 
-    val list = listOf(1, 2, 3)
+    val list = listOf("a", "b", "c")
     print(list.string())
+    println("------------")
+    print("${list.size},${list.lastIndex}")
+
+
 }
 
 
@@ -21,3 +25,6 @@ fun Any?.string(): String {
     if (this == null ) return "null"
     return "hanks:${toString()}"
 }
+
+val <T> List<T>.lastIndex: Int
+    get() = size - 1
