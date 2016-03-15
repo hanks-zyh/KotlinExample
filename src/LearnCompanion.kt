@@ -10,4 +10,5 @@ fun Utils.Companion.getName() = " Utils: $this.javaClass.name" //
 
 fun main(args: Array<String>) {
     println(Utils.getName())
+    println(Utils().count())
 }
