@@ -5,7 +5,11 @@ package publicproperty;
  */
 public class Classroom {
 
-    public void setName(Person person){
+    private Person person;
+    public void setName(Person person1){
+
+        this.person = person1;
         person.name = "hhh";
+        person = new Person();
     }
 }
